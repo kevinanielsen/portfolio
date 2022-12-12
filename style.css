@@ -1,45 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@media only screen and (max-width: 640px) {
+    nav ul {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .about-me .content {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about-me .content img{
+        width: 180px;
+        margin-top: 2em;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
-    border: 1px red solid;
-    font-family: 'Open Sans';
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    height: 3em;
-    width: 100%;
-    align-items: center;
+body {
+    margin-right: auto;
+    margin-left: auto;
+    width: 95%;
+    max-width: 900px;
+    font-family: 'Open Sans';
 }
 
 h1 {
     font-weight: 700;
+    width: 30%;
+    min-width: 225px;
+    font-family: "Proza Libre", sans-serif;
 }
 
-ul {
+nav {
     display: flex;
+    height: 4em;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
     list-style: none;
-    right: 10px
+    width: 30%;
+    min-width: 310px;
+
 }
 
-li {
-    margin-right: 1em;
-}
-
-main {
-    margin-top: 3em;
+nav li {
+    display: inline;
+    margin-right: 5%;
+    min-width: 75px;
 }
 
 h2 {
     font-size: 1.3rem;
     transition: 0.1s;
     margin-bottom: 14px;
+    font-family: "Proza Libre", sans-serif;
 }
 
 h2:hover {
     font-size: 1.4rem;
-    margin-bottom: 12px;
+    margin-bottom: calc(14px - (1.4rem - 1.3rem));
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.about-me {
+    margin-bottom: 1em;
+} 
+
+.about-me .content {
+    display: flex;
+}
+
+.about-me .content img {
+    height: 100%;
+    max-height: 200px;
+}
+
+.about-me .content p {
+    margin-right: 2em;
+}
+
+.projects {
+    margin-bottom: 1em;
+}
+
+.projects h2 {
+    cursor: pointer;
+}
+
+.projects-div li {
+    list-style-type: none;
+    text-decoration: underline;
+}
+
+.projects-div:hover {
+    color: darkblue;
+}
+
+.skills {
+    margin-bottom: 1em;
+}
+
+.skills h2 {
+    cursor: pointer;
+}
+
+.skills-div li {
+    list-style-type: none;
+    display: inline;
+}
+
+.contact h2 {
+    cursor: pointer;
+}
+
+.contact-div li {
+    list-style-type: none;
+    display: inline;
 }
